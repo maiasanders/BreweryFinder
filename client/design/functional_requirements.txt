@@ -1,0 +1,9 @@
+All users can access a home view with a featured brewery
+All users can access a list of breweries
+All users can access brewery detail pages with information and beers for one brewery
+Logged in users can view details for beers
+Logged in users can leave reviews for beers
+Brewers can update brewery details
+Brewers can add and update beers for their breweries
+Brewers can add and update events at their breweries
+Logged in users can view brewery events

@@ -1,0 +1,180 @@
+@import "./base.css";
+
+/* Add global project styles here */
+
+* {
+  font-size: 16px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #edece1;
+  color: #200f3b;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: #200f3b;
+}
+a:hover {
+  color: #6e3fba;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Antonio", sans-serif;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+h2 {
+  font-size: 2rem;
+}
+h3 {
+  font-size: 1.5rem;
+}
+
+/* Input & button styling */
+form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: space-between;
+}
+input,
+button,
+select {
+  max-width: 100%;
+  background-color: #f2f1e9;
+  border: 1px solid var(--input-border-color);
+  padding: 0 1em 0 1em;
+  height: 30px;
+  border-radius: 15px;
+    &:disabled {
+        background-color: #e4e4dc;
+    }
+    &:hover {
+        background-color: var(--input-hover-color)
+    }
+}
+input:focus, textarea:focus {
+  background-color: hsl(51, 28%, 98%);
+  box-shadow: 0 0 8px black;
+}
+button:hover {
+  background-color: hsl(51, 28%, 98%);
+}
+textarea {
+    background-color: #f2f1e9;
+    border: 1px solid var(--input-border-color);
+    border-radius: 15px;
+    width: 100%;
+}
+fieldset {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    border: 1px solid var(--input-border-color);
+    border-radius: 10px;
+}
+input[type=submit] {
+    background-color: var(--text-color);
+    color: var(--input-color);
+}
+.textarea-sec {
+    width: 100%
+}
+
+
+.filters {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--filters-bg-color);
+  padding: 10px;
+  gap: 10px;
+  height: 100%;
+}
+.filters > form {
+    width: 100%
+}
+
+.filtered-page {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    grid-template-areas: "filters content";
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+  justify-content: space-evenly;
+  padding: 10px;
+}
+.card {
+    border: 1px solid #B5B185;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: #f2f1e9;
+    box-shadow: 2px 2px 2px #00000030;
+    width: 260px;
+    height: 290px;
+    display: grid;
+}
+.card img {
+    max-height: 166px;
+    object-fit: cover;
+    justify-self: center;
+}
+.card h3 {
+    height: 67px;
+}
+
+.page-content {
+    padding: 10px
+}
+
+svg:hover {
+    filter: drop-shadow(0 0 1px white);
+  }
+
+@media only screen and (max-width: 425px) {
+    h1, h2, h3, h4 {
+        text-align: center;
+    }
+  aside {
+    position: absolute;
+    left: 15%;
+    right: 15%;
+    top: 40px;
+    padding: 20px;
+    border-radius: 0 0 10px 10px;
+  }
+  aside svg {
+    align-self: flex-end;
+  }
+  .filtered-page {
+    grid-template-columns: 1fr;
+    grid-template-areas: "content";
+  }
+  .filters {
+    height: auto;
+    z-index: 99;
+  }
+  form {
+    flex-direction: column;
+  }
+  input, button, select {
+    width: 100%;
+  }
+  input[type=checkbox], input[type=radio], option {
+    width: 1rem;
+  }
+  
+}
